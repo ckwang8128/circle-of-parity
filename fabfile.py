@@ -93,9 +93,9 @@ def circles_to_html():
 
             #Might actually not have logo, safety check
             elif logo_path == '':
-                logo_path = 'data/circle_html/images/img_not_found.jpg'
+                logo_path = '/static/images/img_not_found.jpg'
 
-            imgs.append(logo_path)
+            imgs.append('static/'+logo_path.split('/')[-1])
             team_names.append(game["winner"])
             game_info.append("Beat {0}, Score: {1} - {2}".format(game["loser"], game["winning_score"], game["losing_score"]))
         
